@@ -1,13 +1,11 @@
 import React from 'react';
 
+import Layout from './pages/Layout';
+
 import './index.css';
 
 const App = () => {
-  return (
-    <>
-      <h1>Hello React!</h1>
-    </>
-  );
+  return <Layout></Layout>;
 };
 
 export default App;
