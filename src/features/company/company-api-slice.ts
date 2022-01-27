@@ -18,6 +18,7 @@ interface Company {
 
 export const companiesApiSlice = createApi({
   reducerPath: 'companyApi',
+  tagTypes: ['Companies'],
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://api.jsonbin.io/b',
   }),
@@ -27,6 +28,13 @@ export const companiesApiSlice = createApi({
         query() {
           return '/6177e9399548541c29c8c0f5';
         },
+        providesTags: (result) =>
+          result
+            ? [
+                ...result.map(({ id }) => ({ type: 'Companies' as const, id })),
+                { type: 'Companies', id: 'LIST' },
+              ]
+            : [{ type: 'Companies', id: 'LIST' }],
       }),
     };
   },
