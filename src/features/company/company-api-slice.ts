@@ -1,43 +1,33 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-interface Company {
-  id: string;
-  name: string;
-  description: string;
-  phone: string;
-  image: string;
-  email: string;
-  address: {
-    number: string;
-    street: string;
-    zip: string;
-    city: string;
-    country: string;
-  };
-}
+import { Company } from '../../models/Company';
 
 export const companiesApiSlice = createApi({
   reducerPath: 'companyApi',
   tagTypes: ['Companies'],
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://api.jsonbin.io/b',
+    // baseUrl: 'https://api.jsonbin.io/b',
+    baseUrl: 'http://localhost:3000',
   }),
-  endpoints(builder) {
-    return {
-      fetchCompanies: builder.query<Company[], number | void>({
-        query() {
-          return '/6177e9399548541c29c8c0f5';
-        },
-        providesTags: (result) =>
-          result
-            ? [
-                ...result.map(({ id }) => ({ type: 'Companies' as const, id })),
-                { type: 'Companies', id: 'LIST' },
-              ]
-            : [{ type: 'Companies', id: 'LIST' }],
-      }),
-    };
-  },
+  endpoints: (builder) => ({
+    fetchCompanies: builder.query<Company[], string | void>({
+      // query: () => '/6177e9399548541c29c8c0f5',
+      query: () => '/companies',
+      providesTags: (result) =>
+        result
+          ? [
+              ...result.map(({ id }) => ({ type: 'Companies' as const, id })),
+              { type: 'Companies', id: 'LIST' },
+            ]
+          : [{ type: 'Companies', id: 'LIST' }],
+    }),
+    getCompany: builder.query<Company, string>({
+      // query: (id) => `/6177e9399548541c29c8c0f5/${id}`,
+      query: (id) => `/companies/${id}`,
+
+      providesTags: (result, error, id) => [{ type: 'Companies', id }],
+    }),
+  }),
 });
 
-export const { useFetchCompaniesQuery } = companiesApiSlice;
+export const { useFetchCompaniesQuery, useGetCompanyQuery } = companiesApiSlice;
