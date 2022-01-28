@@ -9,6 +9,3 @@ export const store = configureStore({
     return getDefaultMiddleware().concat(companiesApiSlice.middleware);
   },
 });
-
-// export type AppDispatch = typeof store.dispatch;
-// export type RootState = ReturnType<typeof store.getState>;
