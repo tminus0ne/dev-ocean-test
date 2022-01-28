@@ -1,8 +1,17 @@
 .logo {
   display: flex;
   justify-content: center;
+  background-color: #fff;
+  text-align: center;
+  padding: 25px 0;
+  margin-bottom: 50px;
 
   p {
     padding-left: 10px;
+    color: #000;
+  }
+  a:link,
+  a:visited {
+    text-decoration: none;
   }
 }
