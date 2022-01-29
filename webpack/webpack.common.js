@@ -4,7 +4,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: path.resolve(__dirname, '..', './src/index.tsx'),
+  entry: path.resolve(__dirname, '..', '/src/index.tsx'),
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
   },
@@ -44,6 +44,7 @@ module.exports = {
     path: path.resolve(__dirname, '..', './build'),
     filename: 'bundle.js',
     clean: true,
+    publicPath: '/',
   },
   plugins: [
     new HtmlWebpackPlugin({
