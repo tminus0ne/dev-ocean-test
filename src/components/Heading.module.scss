@@ -1,6 +1,7 @@
 .logo {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #fff;
   text-align: center;
   padding: 25px 0;
@@ -9,7 +10,15 @@
   p {
     padding-left: 10px;
     color: #000;
+
+    &:hover {
+      color: rgb(218, 47, 47);
+      transform: scale(1.2);
+    }
+
+    transition: all 0.3s ease-in-out;
   }
+
   a:link,
   a:visited {
     text-decoration: none;

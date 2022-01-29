@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
 import { NavLink } from 'react-router-dom';
 
+import styles from './NearbyListItem.module.scss';
+
 interface NearbyListProps {
   companyName: string;
   number: string;
@@ -19,8 +21,8 @@ const NearbyListItem: FC<NearbyListProps> = ({
   link,
 }) => {
   return (
-    <NavLink to={`/${link}`}>
-      <li>
+    <NavLink className={styles.link} to={`/${link}`}>
+      <li className={styles.list}>
         <span> {companyName}</span>
         <span> {number}</span>
         <span> {street}</span>

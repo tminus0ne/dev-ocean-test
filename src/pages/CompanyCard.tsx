@@ -12,7 +12,6 @@ import styles from './CompanyCard.module.scss';
 const CompanyCard: FC = () => {
   const { id } = useParams();
   const { data: company } = useGetCompanyQuery(id!);
-  console.log(id);
 
   const { data: companies = [] } = useFetchCompaniesQuery();
 

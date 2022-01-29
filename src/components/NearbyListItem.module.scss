@@ -1,0 +1,23 @@
+.list {
+  list-style-type: none;
+  padding: 10px;
+  font-size: 14px;
+  background-color: rgb(224, 224, 224);
+  border-radius: 5px;
+  margin: 10px auto;
+
+  span:first-child {
+    padding-right: 100px;
+  }
+}
+
+.link {
+  color: #000;
+  text-decoration: none;
+
+  &:hover {
+    color: rgb(218, 47, 47);
+  }
+
+  transition: all 0.3s ease-in-out;
+}
