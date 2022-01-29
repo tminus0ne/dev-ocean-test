@@ -21,7 +21,7 @@ const NearbyListItem: FC<NearbyListProps> = ({
   link,
 }) => {
   return (
-    <NavLink className={styles.link} to={`/${link}`}>
+    <NavLink className={styles.link} to={`/companies/${link}`}>
       <li className={styles.list}>
         <span> {companyName}</span>
         <span> {number}</span>

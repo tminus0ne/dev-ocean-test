@@ -8,7 +8,7 @@ const Heading: FC = () => {
   return (
     <div className={styles.logo}>
       <img src={arrow} alt="Project logo" height={15} width={10} />
-      <NavLink to="/">
+      <NavLink to="/companies">
         <p>LOGO</p>
       </NavLink>
     </div>
