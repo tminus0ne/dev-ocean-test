@@ -1,0 +1,16 @@
+.list {
+  display: grid;
+  grid-template-columns: 1fr 2fr 0.1fr;
+  background-color: #fff;
+  margin: 5px auto;
+
+  padding: 20px;
+  text-align: start;
+  font-size: 18px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(235, 232, 232);
+    transition: background-color 0.5s linear;
+  }
+}
