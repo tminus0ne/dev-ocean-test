@@ -1,0 +1,30 @@
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.heading {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  row-gap: 15px;
+  background-color: #fff;
+
+  text-align: left;
+  padding: 20px;
+
+  p {
+    text-transform: uppercase;
+    color: #f51b51;
+    font-weight: 900;
+    font-size: 18px;
+  }
+}
+
+.main {
+  margin-bottom: 30px;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
+}

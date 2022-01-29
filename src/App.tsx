@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
+import { Route, Routes } from 'react-router-dom';
 
 import Layout from './pages/Layout';
 import CompaniesList from './pages/CompaniesList';
 import CompanyCard from './pages/CompanyCard';
 
 import './index.scss';
-import { Route, Routes } from 'react-router-dom';
 
 const App: FC = () => {
   return (

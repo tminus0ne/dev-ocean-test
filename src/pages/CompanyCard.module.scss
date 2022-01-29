@@ -1,0 +1,65 @@
+.card {
+  margin-bottom: 30px;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 20px;
+
+  grid-template-areas:
+    'a a a a'
+    'b c d d';
+
+  .img {
+    grid-area: a;
+    max-width: 1000px;
+    max-height: 600px;
+    margin: 0 auto;
+  }
+
+  .address {
+    grid-area: b;
+    text-align: left;
+  }
+
+  .contact {
+    grid-area: c;
+    text-align: left;
+  }
+
+  .address,
+  .contact,
+  .nearby {
+    font-size: 12px;
+
+    p {
+      padding: 5px 0;
+    }
+  }
+
+  .nearby {
+    grid-area: d;
+    text-align-last: left;
+    background-color: #fff;
+    padding: 15px;
+
+    li {
+      list-style-type: none;
+      padding: 10px;
+      font-size: 14px;
+      background-color: rgb(224, 224, 224);
+      border-radius: 5px;
+      margin: 10px auto;
+
+      span:first-child {
+        padding-right: 100px;
+      }
+    }
+  }
+
+  h3 {
+    padding: 10px 0 25px;
+    font-size: 24px;
+  }
+}

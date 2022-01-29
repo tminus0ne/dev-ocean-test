@@ -5,7 +5,8 @@ const Layout: FC = ({ children }) => {
   return (
     <section className="layout">
       <Heading />
-      {children}
+
+      <main className="main">{children}</main>
     </section>
   );
 };
