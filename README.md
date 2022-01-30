@@ -24,4 +24,4 @@ To build the application use command:
 npm run build
 ```
 
-Project uploaded to Firebase hosting: [Link](https://test-assign-5c99f.web.app)
+Project uploaded to Firebase hosting: [Link](https://dev-ocean-test.web.app)
