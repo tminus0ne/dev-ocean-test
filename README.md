@@ -6,7 +6,7 @@ Project contains of 2 pages:
 
 - List of companies with the company name and description. By clicking on selected company you will be redirected on page with the company details.
 
-- Information about the selected company. At the bottom of the page, you can see a list of companies that are located in the same city as the selected company. Clicking on such a company in the list will take you to its page.
+- Information about the selected company. At the bottom of the page, you can see a list of companies that are located in the same city as the selected company. Clicking on such a company in the list will take you to its page. By clicking on Logo on the top of the page you can return to previous page with the list of companies.
 
 Project includes state management with RTK Query and routing with React-Router v6.
 
