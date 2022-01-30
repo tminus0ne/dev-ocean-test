@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 
 import NearbyListItem from '../components/NearbyListItem';
+import Loader from '../components/Loader';
 
 import {
   useFetchCompaniesQuery,
@@ -12,9 +13,18 @@ import styles from './CompanyCard.module.scss';
 
 const CompanyCard: FC = () => {
   const { id } = useParams();
-  const { data: company } = useGetCompanyQuery(id!);
+  const { data: company, error: idError, isLoading } = useGetCompanyQuery(id!);
 
-  const { data: companies = [] } = useFetchCompaniesQuery();
+  const { data: companies = [], error: companiesError } =
+    useFetchCompaniesQuery();
+
+  if (idError || companiesError) {
+    return <Navigate to="/companies" />;
+  }
+
+  if (isLoading) {
+    return <Loader />;
+  }
 
   const filteredCompanies = companies.filter(
     (comp) =>

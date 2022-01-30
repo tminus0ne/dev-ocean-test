@@ -1,13 +1,23 @@
 import React, { FC } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Navigate } from 'react-router-dom';
 
 import { useFetchCompaniesQuery } from '../features/company/company-api-slice';
+
 import CompanyListItem from '../components/CompanyListItem';
+import Loader from '../components/Loader';
 
 import styles from './CompaniesList.module.scss';
 
 const CompaniesList: FC = () => {
-  const { data = [] } = useFetchCompaniesQuery();
+  const { data = [], isLoading, isError } = useFetchCompaniesQuery();
+
+  if (isError) {
+    return <Navigate to="/companies" />;
+  }
+
+  if (isLoading) {
+    return <Loader />;
+  }
 
   return (
     <div className={styles.main}>
