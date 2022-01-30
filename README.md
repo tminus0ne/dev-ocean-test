@@ -15,7 +15,7 @@ Database created using mockAPI ([mockapi.io](https://mockapi.io))
 To start the application in dev mode use command:
 
 ```
-npm run dev
+npm start
 ```
 
 To build the application use command:
