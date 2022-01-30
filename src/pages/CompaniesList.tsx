@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import { useFetchCompaniesQuery } from '../features/company/company-api-slice';
+import CompanyListItem from '../components/CompanyListItem';
 
 import styles from './CompaniesList.module.scss';
-import CompanyListItem from '../components/CompanyListItem';
 
 const CompaniesList: FC = () => {
   const { data = [] } = useFetchCompaniesQuery();

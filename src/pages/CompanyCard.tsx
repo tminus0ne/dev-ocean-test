@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { useParams } from 'react-router-dom';
+
 import NearbyListItem from '../components/NearbyListItem';
 
 import {
@@ -15,7 +16,7 @@ const CompanyCard: FC = () => {
 
   const { data: companies = [] } = useFetchCompaniesQuery();
 
-  const filterArr = companies.filter(
+  const filteredCompanies = companies.filter(
     (comp) =>
       comp.address.city === company?.address.city && comp.id !== company.id
   );
@@ -43,7 +44,7 @@ const CompanyCard: FC = () => {
 
       <div className={styles.nearby}>
         <h3>Nearby places</h3>
-        {filterArr.map((comp) => (
+        {filteredCompanies.map((comp) => (
           <NearbyListItem
             key={comp.id}
             companyName={comp.name}
