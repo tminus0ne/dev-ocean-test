@@ -7,7 +7,7 @@ export const companiesApiSlice = createApi({
   tagTypes: ['Companies'],
   baseQuery: fetchBaseQuery({
     // baseUrl: 'https://api.jsonbin.io/b',
-    baseUrl: 'http://localhost:3000',
+    baseUrl: 'https://61f627192e1d7e0017fd6ce8.mockapi.io/',
   }),
   endpoints: (builder) => ({
     fetchCompanies: builder.query<Company[], string | void>({
