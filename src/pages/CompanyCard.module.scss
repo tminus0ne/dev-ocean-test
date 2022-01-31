@@ -41,7 +41,7 @@
   .nearby {
     grid-area: d;
     text-align-last: left;
-    background-color: #fff;
+    background-color: rgb(238, 237, 237);
     padding: 15px;
   }
 
@@ -67,10 +67,9 @@
     grid-template-columns: 1fr;
 
     grid-template-areas:
-      'a'
-      'b'
-      'c'
-      'd';
+      'a a'
+      'b c'
+      'd d';
   }
 
   .img {
@@ -80,13 +79,12 @@
   .address,
   .contact,
   .nearby {
-    margin: auto;
     text-align-last: left;
   }
 }
 
 @media screen and (max-width: 600px) {
   .img {
-    width: 400px;
+    width: 350px;
   }
 }
