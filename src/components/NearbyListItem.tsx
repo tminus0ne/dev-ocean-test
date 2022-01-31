@@ -24,10 +24,12 @@ const NearbyListItem: FC<NearbyListProps> = ({
     <NavLink className={styles.link} to={`/companies/${link}`}>
       <li className={styles.list}>
         <span> {companyName}</span>
-        <span> {number}</span>
-        <span> {street}</span>
-        <span> {city}</span>
-        <span> {zip}</span>
+        <div>
+          <span> {number}</span>
+          <span> {street}</span>
+          <span> {city}</span>
+          <span> {zip}</span>
+        </div>
       </li>
     </NavLink>
   );
