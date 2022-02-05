@@ -6,7 +6,8 @@
     "start": "NODE_ENV=development webpack serve --config webpack/webpack.config.js --env env=dev",
     "build": "NODE_ENV=production webpack --config webpack/webpack.config.js --env env=prod",
     "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
-    "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
+    "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "test": "jest --watch"
   },
   "license": "MIT",
   "dependencies": {
@@ -24,6 +25,9 @@
     "@babel/preset-typescript": "^7.16.0",
     "@babel/runtime": "^7.16.5",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
     "@types/react-redux": "^7.1.22",
@@ -42,6 +46,7 @@
     "eslint-plugin-react": "^7.27.1",
     "eslint-plugin-react-hooks": "^4.3.0",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.4.7",
     "mini-css-extract-plugin": "^2.4.6",
     "postcss-loader": "^6.2.1",
     "prettier": "^2.5.1",
